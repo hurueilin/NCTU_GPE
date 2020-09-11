@@ -30,18 +30,18 @@ void addToLIS(vector<int> &tmpSeq){
 
 void backtrack(int index, vector<bool> &selected, vector<int> &nums)
 {
+    // 每次進backtrack()就是一種組合
     vector<int> tmpSeq;
     for(int i=0; i<nums.size(); i++){
         if(selected[i]){
             tmpSeq.push_back(nums[i]);
         }
     }
-    
     if(isIncreasing(tmpSeq)){
         addToLIS(tmpSeq);
     }
     
-
+    // 遞迴處理
     for (; index<nums.size(); index++)
     {
         // 選取位於index的數字
