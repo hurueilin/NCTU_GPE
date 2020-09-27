@@ -1,6 +1,50 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/***
+Description:
+Please find the longest monotonically increasing subsequence (LMIS) of a sequence of n numbers (each number m, 1≤ m ≤ 232-1)and indicate its length of the sequence. For example, the sequence
+
+    2, 5, 3, 1, 6, 4
+
+has three LMISs of length 3, namely,
+
+   (2, 5, 6),  (2, 3, 6),  (2, 3, 4).
+
+Sample Input
+4
+6
+2 5 3 1 6 4
+9
+2 6 1 9 7 3 5 4 8
+7
+1 2 3 4 5 6 7
+7
+7 6 5 4 3 2 1
+
+Sample Output
+3
+2 5 6
+2 3 6
+2 3 4
+5
+2 6 7 8
+2 3 5 8
+2 3 4 8
+1 3 5 8
+1 3 4 8
+1
+1 2 3 4 5 6 7
+7
+7
+6
+5
+4
+3
+2
+1
+***/
+
 // 作法: 先Enumerate Combinations後，再檢查sequence是否遞增
 // Time complexity: 最差2^9 (因為題目n最多到9，可暴力法)
 
