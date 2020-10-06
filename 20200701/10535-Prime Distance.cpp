@@ -30,7 +30,7 @@ bool checkisPrime(int n){
         return isPrime[n];
     }
     else{
-        for(unsigned int i=0; i<primes.size() && primes[i]<n; i++){
+        for(unsigned int i=0; i<primes.size(); i++){
             if(n % primes[i] == 0) return false;
         }
         return true;
